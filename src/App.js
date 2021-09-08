@@ -1,5 +1,5 @@
-import "./App.css";
-import Dictionary from "./Dictionary";
+import "./app.css";
+import Dictionary from "./dictionary";
 
 export default function App() {
   return (
@@ -15,6 +15,7 @@ export default function App() {
           <a
             href="https://github.com/ffionwyn/dictionary-project-react"
             target="_blank"
+            rel="noreferrer"
           >
             Open source code
           </a>
