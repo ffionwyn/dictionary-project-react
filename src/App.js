@@ -1,5 +1,5 @@
-import "./app.css";
-import Dictionary from "./dictionary";
+import "./App.css";
+import Dictionary from "./Dictionary";
 
 export default function App() {
   return (
