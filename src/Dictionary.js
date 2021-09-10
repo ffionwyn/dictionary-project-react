@@ -37,7 +37,7 @@ function handleKeywordChange(event) {
   return (
     <div className="Dictionary">
       <form onSubmit={search}>
-        <input type="search" onChange={handleKeywordChange} />;
+        <input type="search" onChange={handleKeywordChange} />
       </form>
       <Results results={results} />
       <Photos photos={photos} />
