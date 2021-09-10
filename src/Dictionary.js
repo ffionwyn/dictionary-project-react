@@ -26,14 +26,15 @@ export default function Dictionary() {
 
     // documentation - https://dictionaryapi.dev/e
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US/${keyword}`;
-    axios.get(apiUrl).then(handlePexelsResponse);
+    axios.get(apiUrl).then(handleResponse);
+
+    let pexelsApiKey =
+      "563492ad6f917000010000014160d6df3aa44977b2706ec7b6312f62";
+    let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=6`;
+    let headers = { Authorization: `Bearer ${pexelsApiKey}` };
+
+    axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
   }
-
-  let pexelsApiKey = "563492ad6f917000010000014160d6df3aa44977b2706ec7b6312f62";
-  let pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=6`;
-  let headers = { Authorization: `Bearer ${pexelsApiKey}` };
-
-  axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
   return (
     <div className="Dictionary">
       <form onSubmit={search}>
