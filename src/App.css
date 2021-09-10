@@ -11,3 +11,10 @@
   font-size: 10px;
   margin: 10px 0;
 }
+
+.search {
+  padding: 20px;
+  text-align: center;
+  color: grey;
+  font-size: 15px;
+}
